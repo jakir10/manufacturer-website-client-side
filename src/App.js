@@ -5,14 +5,16 @@ import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import Portfolio from './Pages/Home/Portfolio';
 import NotFound from './Pages/Shared/NotFound';
+import Blog from './Pages/Home/Blog';
 
 function App() {
   return (
-    <div>
+    <div className='px-10'>
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="portfolio" element={<Portfolio />} />
+        <Route path="blog" element={<Blog />} />
         <Route path="login" element={<Login />} />
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
