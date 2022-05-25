@@ -1,10 +1,12 @@
 import React from 'react';
+import Footer from '../Shared/Footer';
 import Banner from './Banner';
 
 const Home = () => {
     return (
-        <div>
+        <div className='px-10'>
             <Banner></Banner>
+            <Footer></Footer>
         </div>
     );
 };
