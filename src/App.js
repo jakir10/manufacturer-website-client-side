@@ -4,6 +4,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import Portfolio from './Pages/Home/Portfolio';
+import NotFound from './Pages/Shared/NotFound';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="portfolio" element={<Portfolio />} />
         <Route path="login" element={<Login />} />
+        <Route path='*' element={<NotFound />}></Route>
       </Routes>
     </div>
   );
