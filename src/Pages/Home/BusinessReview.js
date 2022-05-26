@@ -17,7 +17,7 @@ const BusinessReview = () => {
                 <BusinessReviewCard cardTitle={"FeedBacks"} description={"120+"} img={positiveFeedback}></BusinessReviewCard>
             </div>
 
-            <div className="stats bg-primary text-primary-content">
+            <div className="flex justify-center items-center stats bg-primary text-primary-content">
 
                 <div className="stat">
                     <div className="stat-title">Have You Any Query</div>
