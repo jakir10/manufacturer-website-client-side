@@ -1,35 +1,16 @@
-import React from 'react';
-import people1 from '../../assets/people/People1.jpg'
-import people2 from '../../assets/people/People2.jpg'
-import people3 from '../../assets/people/People3.jpg'
+import React, { useEffect, useState } from 'react';
 import Review from './Review';
 
 const Reviews = () => {
 
-    const reviews = [
-        {
-            _id: 1,
-            name: 'Mark Jhon',
-            review: '',
-            rating: '4/5',
-            img: people1
+    const [reviews, setReviews] = useState([]);
 
-        },
-        {
-            _id: 2,
-            name: 'Olivia',
-            review: '',
-            rating: '5/5',
-            img: people2
-        },
-        {
-            _id: 3,
-            name: 'James Robert',
-            review: '',
-            rating: '3/5',
-            img: people3
-        },
-    ]
+    useEffect(() => {
+        fetch('http://localhost:5000/review')
+            .then(res => res.json())
+            .then(data => setReviews(data));
+    }, [])
+
 
     return (
         <section className='my-24 text-center '>
