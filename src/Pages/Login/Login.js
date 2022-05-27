@@ -17,7 +17,7 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
 
     // implement jwt token for login
-    const [token] = useToken(user || user);
+    const [token] = useToken(user || gUser);
 
     let signInError;
     const navigate = useNavigate();
