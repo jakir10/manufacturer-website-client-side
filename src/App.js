@@ -13,6 +13,8 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import AddReview from './Pages/Dashboard/AddReview';
 import MyProfile from './Pages/Dashboard/MyProfile';
+import React from 'react';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -20,7 +22,7 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="purchase/:serviceId" element={
+        <Route path="purchase/:_id" element={
           <RequireAuth>
             <Purchase />
           </RequireAuth>
@@ -40,6 +42,7 @@ function App() {
         <Route path="signup" element={<SignUp />} />
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
+      <ToastContainer />
     </div>
   );
 }
