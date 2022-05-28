@@ -15,8 +15,9 @@ import AddReview from './Pages/Dashboard/AddReview';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import Users from './Pages/Dashboard/Users';
 import React from 'react';
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer, } from 'react-toastify';
 import RequireAdmin from './Pages/Login/RequireAdmin';
+import AddProduct from './Pages/Dashboard/AddProduct';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path='addreview' element={<AddReview></AddReview>}></Route>
           <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
           <Route path='users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
+          <Route path='addProduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
         </Route>
         <Route path="portfolio" element={<Portfolio />} />
         <Route path="blog" element={<Blog />} />
