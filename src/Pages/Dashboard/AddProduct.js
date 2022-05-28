@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useQuery } from 'react-query';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import Loading from '../Shared/Loading';
 
 const AddProduct = () => {
@@ -67,7 +67,6 @@ const AddProduct = () => {
     return (
         <div>
             <h2 className="text-2xl">Add a New Product</h2>
-            <ToastContainer></ToastContainer>
             <form onSubmit={handleSubmit(onSubmit)}>
 
                 {/* Name field with error massage */}
