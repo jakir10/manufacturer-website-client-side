@@ -4,8 +4,8 @@ import { Link, Route } from 'react-router-dom';
 const Portfolio = () => {
     return (
 
-        <> <div class="avatar online mt-20">
-            <div class="w-24 rounded-full ring ring-primary">
+        <> <div className="avatar online mt-20">
+            <div className="w-24 rounded-full ring ring-primary">
                 <img src="https://i.ibb.co/jyCFXVz/2021-09-29-21-31-02-Window-2.jpg" alt="" border="0" />
             </div>
         </div>

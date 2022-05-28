@@ -35,7 +35,7 @@ const Login = () => {
     if (loading || gLoading) {
         return <Loading></Loading>
     }
-    // error handle google & eamil
+    // error handle google & email
     if (error || gError) {
         signInError = <small><p className='text-red-500'>{error?.message || gError?.message}</p></small>
     }
