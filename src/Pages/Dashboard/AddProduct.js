@@ -14,7 +14,7 @@ const AddProduct = () => {
 
 
     const onSubmit = async data => {
-        const image = data.img[0];
+        const image = data.image[0];
         const formData = new FormData();
         formData.append('image', image);
         const url = `https://api.imgbb.com/1/upload?expiration=600&key=${imageStorageKey}`
@@ -27,7 +27,7 @@ const AddProduct = () => {
                 if (result.success) {
                     const img = result.data.url;
                     const product = {
-                        img: data.img,
+                        img: img,
                         name: data.name,
                         description: data.description,
                         minQuantity: data.minQuantity,
@@ -163,7 +163,7 @@ const AddProduct = () => {
                         <span className="label-text">Photo</span>
                     </label>
                     <input type="file" className="input input-bordered w-full max-w-xs"
-                        {...register("img", {
+                        {...register("image", {
                             required: {
                                 value: true,
                                 message: 'image is Required'
@@ -171,7 +171,7 @@ const AddProduct = () => {
                         })}
                     />
                     <label className="label">
-                        {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.img.message}</span>}
+                        {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.image.message}</span>}
                     </label>
                 </div>
 

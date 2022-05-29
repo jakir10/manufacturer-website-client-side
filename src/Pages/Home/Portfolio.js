@@ -48,11 +48,13 @@ const Portfolio = () => {
             <div className="card-body">
                 <h2 className="card-title text-2xl">My Previous Projects Link</h2><hr />
 
-                <div className="link link-primary no-underline"
-                >
-                    <Link to="/https://independent-service-prov-522f0.web.app/">1. Jakir's Photography</Link><br />
-                    <Link to="/https://movies-world-jakir.netlify.app/Home">2. Movies World</Link> <br />
-                    <Link to="/https://phone-hunter-jakir.netlify.app/">3. Phone Hunter</Link>
+                {/* Previous site link */}
+                <div className="link link-primary no-underline">
+                    <a target="_blank" href="https://independent-service-prov-522f0.web.app">1. Jakir's Photography</a>
+                    <br />
+                    <a target="_blank" href="https://movies-world-jakir.netlify.app/Home">2. Movies World</a>
+                    <br />
+                    <a target="_blank" href="https://phone-hunter-jakir.netlify.app">3. Phone Hunter</a>
                 </div>
             </div>
         </>
