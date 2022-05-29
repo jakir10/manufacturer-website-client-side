@@ -4,7 +4,7 @@
 [Moto Parts Gear](https://moto-parts-gear.web.app)
 
 ## Heroku server Site Link
-[Moto Parts Gear](https://radiant-wave-25983.herokuapp.com/)
+[Moto Parts Gear server](https://radiant-wave-25983.herokuapp.com/)
 
 ### Website Fuctionality
 * Sign in with verification.
