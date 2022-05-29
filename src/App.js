@@ -16,6 +16,7 @@ import MyProfile from './Pages/Dashboard/MyProfile';
 import Users from './Pages/Dashboard/Users';
 import React from 'react';
 import { ToastContainer, } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import RequireAdmin from './Pages/Login/RequireAdmin';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import ManageAllOrders from './Pages/Dashboard/ManageAllOrders';
