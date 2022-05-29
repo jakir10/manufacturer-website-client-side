@@ -4,7 +4,7 @@ import Loading from '../Shared/Loading';
 import UserRow from './UserRow';
 
 const Users = () => {
-    const { data: users, isLoading, refetch } = useQuery('user', () => fetch('http://localhost:5000/users', {
+    const { data: users, isLoading, refetch } = useQuery('user', () => fetch('https://radiant-wave-25983.herokuapp.com/users', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
