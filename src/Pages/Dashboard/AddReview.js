@@ -6,11 +6,11 @@ import Loading from '../Shared/Loading';
 
 const AddReview = () => {
     const { register, formState: { errors }, handleSubmit, reset, } = useForm();
-    const { data: tools, isLoading } = useQuery('tools', () => fetch('http://localhost:5000/tool').then(res => res.json()))
+    const { data: tools, isLoading } = useQuery('tools', () => fetch('https://radiant-wave-25983.herokuapp.com/tool').then(res => res.json()))
 
     const onSubmit = data => {
         console.log(data);
-        const url = `http://localhost:5000/review`;
+        const url = `https://radiant-wave-25983.herokuapp.com/review`;
 
         fetch(url, {
             method: 'POST',

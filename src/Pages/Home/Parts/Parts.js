@@ -6,7 +6,7 @@ const Parts = () => {
     const [parts, setParts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/product')
+        fetch('https://radiant-wave-25983.herokuapp.com/product')
             .then(res => res.json())
             .then(data => setParts(data));
     }, [])

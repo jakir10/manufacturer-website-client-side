@@ -5,7 +5,7 @@ const MyProfile = () => {
     const { _id } = useParams();
     const [user, setUser] = useState({});
     useEffect(() => {
-        const url = `http://localhost:5000/users/${_id}`;
+        const url = `https://radiant-wave-25983.herokuapp.com/users/${_id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setUser(data));
