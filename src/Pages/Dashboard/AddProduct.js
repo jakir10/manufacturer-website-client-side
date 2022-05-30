@@ -72,7 +72,7 @@ const AddProduct = () => {
                 {/* Name field with error massage */}
                 <div className="form-control w-full max-w-xs">
                     <label className="label">
-                        <span className="label-text">Name</span>
+                        <span className="label-text">Product Name</span>
                     </label>
                     <input type="text" placeholder="Your Name"
                         className="input input-bordered w-full max-w-xs"
@@ -94,7 +94,7 @@ const AddProduct = () => {
                     <label className="label">
                         <span className="label-text">Description</span>
                     </label>
-                    <input type="text" placeholder="Product description"
+                    <textarea type="text" placeholder="Product description"
                         className="input input-bordered w-full max-w-xs"
                         {...register("description", {
                             required: {

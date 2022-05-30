@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const DeleteConfirmModal = ({ deletingProduct, refetch, setDeletingProduct }) => {
     const { name, _id } = deletingProduct;
     const deleted = () => {
-        fetch(`https://radiant-wave-25983.herokuapp.com/product/${_id}`, {
+        fetch(`http://localhost:5000/product/${_id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -24,13 +24,13 @@ const DeleteConfirmModal = ({ deletingProduct, refetch, setDeletingProduct }) =>
 
     return (
         <div>
-            <input type="checkbox" id="delete-confirm-modal" class="modal-toggle" />
-            <div class="modal modal-bottom sm:modal-middle">
-                <div class="modal-box">
-                    <h3 class="font-bold text-lg text-red-500">Delete Confirme ${name}</h3>
-                    <div class="modal-action">
+            <input type="checkbox" id="delete-confirm-modal" className="modal-toggle" />
+            <div className="modal modal-bottom sm:modal-middle">
+                <div className="modal-box">
+                    <h3 className="font-bold text-lg text-red-500">Delete Confirme ${name}</h3>
+                    <div className="modal-action">
                         <button onClick={() => deleted()} className="btn btn-xs btn-error">Delete</button>
-                        <label for="delete-confirm-modal" class="btn btn-xs">Cancel!</label>
+                        <label for="delete-confirm-modal" className="btn btn-xs">Cancel!</label>
                     </div>
                 </div>
             </div>
