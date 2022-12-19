@@ -7,7 +7,7 @@ import Loading from '../Shared/Loading';
 const AddProduct = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
-    const { data: tools, isLoading } = useQuery('tools', () => fetch('https://radiant-wave-25983.herokuapp.com/tool').then(res => res.json()))
+    const { data: tools, isLoading } = useQuery('tools', () => fetch('http://localhost:5000/tool').then(res => res.json()))
 
     // imagebb api
     const imageStorageKey = '13fef34c3ca2fbe67a4aa7a5b0e8be58';
@@ -36,7 +36,7 @@ const AddProduct = () => {
 
                     }
                     // sending to database
-                    fetch('https://radiant-wave-25983.herokuapp.com/product', {
+                    fetch('http://localhost:5000/product', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

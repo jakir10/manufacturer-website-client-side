@@ -5,6 +5,10 @@ const Tool = ({ tool }) => {
     const { _id, img, name, description, minOrderQuantity, avlQuantity, price } = tool;
     const navigate = useNavigate();
 
+    const navigateToToolDetail = id => {
+        navigate(`/tool/${id}`);
+    }
+
     return (
         <div className="card lg:max-w-lg bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
@@ -17,7 +21,8 @@ const Tool = ({ tool }) => {
                 <p>Available Quantity: {avlQuantity}</p>
                 <p>Price: ${price}</p>
                 <div className="card-actions">
-                    <button onClick={() => navigate(`/purchase/${_id}`)} className="btn btn-primary">Buy Now</button>
+                    {/* <button onClick={() => navigateToToolDetail(`/purchase/${_id}`)} className="btn btn-primary">Buy Now</button> */}
+                    <button onClick={() => navigateToToolDetail(_id)} className="btn btn-primary">Buy Now</button>
                 </div>
             </div>
         </div>

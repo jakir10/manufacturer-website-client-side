@@ -21,6 +21,7 @@ import RequireAdmin from './Pages/Login/RequireAdmin';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import ManageAllOrders from './Pages/Dashboard/ManageAllOrders';
 import ManageProducts from './Pages/Dashboard/ManageProducts';
+import ToolDetail from './Pages/Home/ToolDetail';
 
 function App() {
   return (
@@ -28,9 +29,10 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="purchase/:_id" element={
+        <Route path="tool/:toolsId" element={
           <RequireAuth>
-            <Purchase />
+            {/* <Purchase /> */}
+            <ToolDetail />
           </RequireAuth>
         } />
         <Route path="dashboard" element={
