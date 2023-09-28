@@ -5,7 +5,7 @@ const Reviews = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetch("https://manufacturer-website-server-side-steel.vercel.app/review")
+    fetch("https://moto-parts-gear-server.vercel.app/review")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);

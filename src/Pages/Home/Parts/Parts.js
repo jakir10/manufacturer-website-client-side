@@ -6,7 +6,7 @@ const Parts = () => {
   const [parts, setParts] = useState([]);
 
   useEffect(() => {
-    fetch("https://manufacturer-website-server-side-steel.vercel.app/product")
+    fetch("https://moto-parts-gear-server.vercel.app/product")
       .then((res) => res.json())
       .then((data) => setParts(data));
   }, []);

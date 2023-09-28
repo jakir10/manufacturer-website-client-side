@@ -6,7 +6,7 @@
 
 ## Heroku server Link
 
-[Moto Parts Gear - server](https://manufacturer-website-server-side-steel.vercel.app/)
+[Moto Parts Gear - server](https://moto-parts-gear-server.vercel.app/)
 
 ### Website Fuctionality
 

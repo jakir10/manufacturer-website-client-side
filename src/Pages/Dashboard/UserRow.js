@@ -4,16 +4,13 @@ import { toast } from "react-toastify";
 const UserRow = ({ user, index, refetch }) => {
   const { email, role } = user;
   const makeAdmin = () => {
-    fetch(
-      `https://manufacturer-website-server-side-steel.vercel.app/user/admin/${email}`,
-      {
-        method: "PUT",
-        headers: {
-          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-        },
-        // body: JSON.stringify(makeAdmin),
-      }
-    )
+    fetch(`https://moto-parts-gear-server.vercel.app/user/admin/${email}`, {
+      method: "PUT",
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+      // body: JSON.stringify(makeAdmin),
+    })
       .then((res) => {
         if (res.status === 403) {
           toast.error("Failed to make an admin");

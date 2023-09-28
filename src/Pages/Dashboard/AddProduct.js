@@ -15,9 +15,9 @@ const AddProduct = () => {
   } = useForm();
 
   const { data: tools, isLoading } = useQuery("tools", () =>
-    fetch(
-      "https://manufacturer-website-server-side-steel.vercel.app/tool"
-    ).then((res) => res.json())
+    fetch("https://moto-parts-gear-server.vercel.app/tool").then((res) =>
+      res.json()
+    )
   );
 
   // imagebb api
@@ -45,17 +45,14 @@ const AddProduct = () => {
             price: data.price,
           };
           // sending to database
-          fetch(
-            "https://manufacturer-website-server-side-steel.vercel.app/product",
-            {
-              method: "POST",
-              headers: {
-                "content-type": "application/json",
-                authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-              },
-              body: JSON.stringify(product),
-            }
-          )
+          fetch("https://moto-parts-gear-server.vercel.app/product", {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+              authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+            },
+            body: JSON.stringify(product),
+          })
             .then((res) => res.json())
             .then((inserted) => {
               if (inserted.insertedId) {

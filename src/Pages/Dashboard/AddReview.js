@@ -12,14 +12,14 @@ const AddReview = () => {
     reset,
   } = useForm();
   const { data: tools, isLoading } = useQuery("tools", () =>
-    fetch(
-      "https://manufacturer-website-server-side-steel.vercel.app/tool"
-    ).then((res) => res.json())
+    fetch("https://moto-parts-gear-server.vercel.app/tool").then((res) =>
+      res.json()
+    )
   );
 
   const onSubmit = (data) => {
     console.log(data);
-    const url = `https://manufacturer-website-server-side-steel.vercel.app/review`;
+    const url = `https://moto-parts-gear-server.vercel.app/review`;
 
     fetch(url, {
       method: "POST",

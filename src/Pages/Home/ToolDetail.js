@@ -7,7 +7,7 @@ const ToolDetail = () => {
   const [tool, setTool] = useState({});
   useEffect(() => {
     // const url = `https://https://pacific-falls-91567.herokuapp.com/inventory/${inventoryId}`;
-    const url = `https://manufacturer-website-server-side-steel.vercel.app/tool/${toolsId}`;
+    const url = `https://moto-parts-gear-server.vercel.app/tool/${toolsId}`;
 
     fetch(url)
       .then((res) => res.json())

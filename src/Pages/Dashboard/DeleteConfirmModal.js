@@ -8,15 +8,12 @@ const DeleteConfirmModal = ({
 }) => {
   const { name, _id } = deletingProduct;
   const deleted = () => {
-    fetch(
-      `https://manufacturer-website-server-side-steel.vercel.app/product/${_id}`,
-      {
-        method: "DELETE",
-        headers: {
-          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-        },
-      }
-    )
+    fetch(`https://moto-parts-gear-server.vercel.app/product/${_id}`, {
+      method: "DELETE",
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

@@ -9,9 +9,9 @@ const Tools = () => {
   const navigate = useNavigate();
 
   // useEffect(() => {
-  //     // fetch('https://manufacturer-website-server-side-steel.vercel.app/tool')
+  //     // fetch('https://moto-parts-gear-server.vercel.app/tool')
 
-  //     const url = `https://manufacturer-website-server-side-steel.vercel.app/tool/${_id}`;
+  //     const url = `https://moto-parts-gear-server.vercel.app/tool/${_id}`;
   //     fetch(url)
 
   //         .then(res => res.json())

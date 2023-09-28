@@ -19,7 +19,7 @@ const ManageProducts = () => {
     isLoading,
     refetch,
   } = useQuery("products", () =>
-    fetch("https://manufacturer-website-server-side-steel.vercel.app/product", {
+    fetch("https://moto-parts-gear-server.vercel.app/product", {
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },

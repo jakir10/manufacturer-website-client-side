@@ -5,7 +5,7 @@ const MyProfile = () => {
   const { _id } = useParams();
   const [user, setUser] = useState({});
   useEffect(() => {
-    const url = `https://manufacturer-website-server-side-steel.vercel.app/users/${_id}`;
+    const url = `https://moto-parts-gear-server.vercel.app/users/${_id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setUser(data));
